@@ -1,0 +1,12 @@
+export EDITOR=vim
+
+# Seems to fix tmux color issues.
+export TERM=xterm-256color
+
+# Get history for each window.
+[[ -d ~/.history ]] || mkdir --mode=0700 ~/.history
+[[ -d ~/.history ]] && chmod 0700 ~/.history
+HISTFILE=~/.history/history.$$
+HISTFILESIZE=0 # Close any old history file by zeroing HISTFILESIZE.
+HISTFILESIZE=-1
+HISTSIZE=-1
