@@ -10,3 +10,8 @@ HISTFILE=~/.history/history.$$
 HISTFILESIZE=0 # Close any old history file by zeroing HISTFILESIZE.
 HISTFILESIZE=-1
 HISTSIZE=-1
+
+# Aliases.
+alias camera-on="sudo modprobe -r uvcvideo"
+alias camera-off="sudo modprobe uvcvideo"
+alias tor-ssh="ssh -o ProxyCommand='nc -x localhost:9050 %h %p'"
