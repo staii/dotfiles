@@ -1,0 +1,8 @@
+[user]
+	name = Sinan Taifour
+	email = sinan@taifour.com
+[color]
+	ui = auto
+[push]
+	default = simple
+[core]
