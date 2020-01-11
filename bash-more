@@ -12,6 +12,10 @@ HISTFILESIZE=-1
 HISTSIZE=-1
 
 # Aliases.
-alias camera-on="sudo modprobe -r uvcvideo"
-alias camera-off="sudo modprobe uvcvideo"
 alias tor-ssh="ssh -o ProxyCommand='nc -x localhost:9050 %h %p'"
+alias secure="export HISTFILE=; history -c"
+alias gpull="git pull --recurse-submodules"
+alias irb="pry"
+alias recover-admin="ssh -p 222 root@tooling.cashbasha.com /mnt/phabricator/phabricator/bin/auth recover admin"
+alias upup="sudo apt-get update && sudo aptitude -y safe-upgrade"
+alias df="df -x squashfs -x tmpfs"
