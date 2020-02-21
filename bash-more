@@ -11,6 +11,12 @@ HISTFILESIZE=0 # Close any old history file by zeroing HISTFILESIZE.
 HISTFILESIZE=-1
 HISTSIZE=-1
 
+# Key remappings.
+xmodmap -e "keycode 110 = Insert"
+xmodmap -e "keycode 115 = Delete"
+xmodmap -e "keycode 118 = Home"
+xmodmap -e "keycode 119 = End"
+
 # Aliases.
 alias tor-ssh="ssh -o ProxyCommand='nc -x localhost:9050 %h %p'"
 alias secure="export HISTFILE=; history -c"
@@ -19,3 +25,13 @@ alias irb="pry"
 alias recover-admin="ssh -p 222 root@tooling.cashbasha.com /mnt/phabricator/phabricator/bin/auth recover admin"
 alias upup="sudo apt-get update && sudo aptitude -y safe-upgrade"
 alias df="df -x squashfs -x tmpfs"
+alias gdfuse="google-drive-ocamlfuse"
+alias docker-ubuntu="docker run --rm -ti local/ubuntu"
+
+# Exports.
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/other:$PATH"
+
+# Setup rbenv.
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
