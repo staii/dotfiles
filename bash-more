@@ -25,8 +25,7 @@ alias irb="pry"
 alias recover-admin="ssh -p 222 root@tooling.cashbasha.com /mnt/phabricator/phabricator/bin/auth recover admin"
 alias upup="sudo apt-get update && sudo aptitude -y safe-upgrade"
 alias df="df -x squashfs -x tmpfs"
-alias gdfuse="google-drive-ocamlfuse"
-alias docker-ubuntu="docker run --rm -ti local/ubuntu"
+alias docker-ubuntu="docker run --rm -ti --net=host -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix local/ubuntu"
 
 # Exports.
 export PATH="$HOME/.local/bin:$PATH"
@@ -35,3 +34,6 @@ export PATH="/opt/other:$PATH"
 # Setup rbenv.
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Setup for Node.
+export NODE_PATH="./deps:/usr/local/lib/node_modules"

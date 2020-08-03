@@ -6,6 +6,10 @@ unbind C-b
 set-option -g prefix C-q
 bind-key C-q send-prefix
 
+# Shift arrows to switch windows.
+bind -n S-Left previous-window
+bind -n S-Right next-window
+
 # Split panes with | and -
 bind | split-window -h
 bind - split-window -v
