@@ -37,3 +37,6 @@ eval "$(rbenv init -)"
 
 # Setup for Node.
 export NODE_PATH="./deps:/usr/local/lib/node_modules"
+
+alias ledger="ledger --pedantic"
+alias myip="curl -s https://api.ipify.org && echo"
